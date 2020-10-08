@@ -11,11 +11,7 @@
         var s = params.get('s'); // 
         if (w != null) {
             var outw = BASE64.decode(w);
-            document.getElementById("1").style.display = "none";
-            document.getElementById("2").style.display = "none";
-            document.getElementById("3").style.display = "none";
-            document.getElementById("4").style.display = "none";
-            document.getElementById("5").style.display = "none"
+            
         } else {
             // var outw = "祝东川学子月考满分"
         }
@@ -148,9 +144,19 @@
     <script>
         if (outw != null) {
             document.getElementById("w").innerHTML = outw;
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "none"
         } else { }
         if (outs != null) {
             document.getElementById("s").innerHTML = outs;
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "none"
         } else { }
     </script>
     <script type="text/javascript"
