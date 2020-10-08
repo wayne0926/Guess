@@ -8,7 +8,7 @@
     <script>
         var params = (new URL(document.location)).searchParams;
         var w = params.get('w'); // 
-        var s = parseInt(params.get('s')); // 
+        var s = params.get('s'); // 
         if (w != null) {
             var outw = BASE64.decode(w);
             
