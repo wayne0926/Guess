@@ -10,13 +10,14 @@
         var w = params.get('w'); // 
         var s = params.get('s'); // 
         if (w != null) {
+            var w = w.replace(' ', '-');
             var outw = BASE64.urlsafe_decode(w);
             
         } else {
             // var outw = "祝东川学子月考满分"
         }
         if (s != null) {
-            var outs = BASE64.urlsafe_decode(s);
+            var outs1 = BASE64.urlsafe_decode(s);
           
         } else {
             // var outs = "参数请转到https://x.wr0926.ml/p/"
