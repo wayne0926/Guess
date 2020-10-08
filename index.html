@@ -4,25 +4,25 @@
 
 
 <head>
-    <script type="text/javascript" src="./assets/js/base64.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wayne0926/miaodrew.github.io/assets/js/base64.js"></script>
     <script>
         var params = (new URL(document.location)).searchParams;
         var w = params.get('w'); // 
         var s = params.get('s'); // 
         if (w != null) {
-            var outw = BASE64.decode(w)
-            document.getElementById("1").style.display = "none"
-            document.getElementById("2").style.display = "none"
-            document.getElementById("3").style.display = "none"
+            var outw = BASE64.decode(w);
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
             document.getElementById("4").style.display = "none"
         } else {
             // var outw = "祝东川学子月考满分"
         }
         if (s != null) {
-            var outs = BASE64.decode(s)
-            document.getElementById("1").style.display = "none"
-            document.getElementById("2").style.display = "none"
-            document.getElementById("3").style.display = "none"
+            var outs = BASE64.decode(s);
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
             document.getElementById("4").style.display = "none"
         } else {
             // var outs = "参数请转到https://x.wr0926.ml/p/"
