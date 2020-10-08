@@ -4,29 +4,10 @@
 
 
 <head>
-    <script type="text/javascript" src="./assets/js/base64.js"></script>
     <script>
         var params = (new URL(document.location)).searchParams;
         var w = params.get('w'); // 
-        var s = params.get('s'); // 
-        if (w != null) {
-            var outw = BASE64.decode(w)
-            document.getElementById("1").style.display = "none"
-            document.getElementById("2").style.display = "none"
-            document.getElementById("3").style.display = "none"
-            document.getElementById("4").style.display = "none"
-        } else {
-            // var outw = "祝东川学子月考满分"
-        }
-        if (s != null) {
-            var outs = BASE64.decode(s)
-            document.getElementById("1").style.display = "none"
-            document.getElementById("2").style.display = "none"
-            document.getElementById("3").style.display = "none"
-            document.getElementById("4").style.display = "none"
-        } else {
-            // var outs = "参数请转到https://x.wr0926.ml/p/"
-        }
+        var outp = decodeURIComponent(window.atob(w))
     </script>
 
     <!-- META -->
@@ -76,14 +57,8 @@
                 <!-- ANIMATION CONTAINER -->
                 <div class="animation-container animation-fade-right" data-animation-delay="0">
                     <!-- https://cdn.jsdelivr.net/gh/drew233/cdn//20200318135942.webp    -->
-                    <h1 id="w">链接参数</h1>
-                    <h4 id="s">“w”：大标题(BASE64)</h4>
-                    <h4 id="1">“s”：小标题(BASE64)</h4>
-                    <h3 id="2">例子</h3>
-                    <h5 id="3"><a
-                            href="https://x.wr0926.ml?w=5L2g5aW9&s=5qyi6L+O5L2g">https://x.wr0926.ml?w=5L2g5aW9&s=5qyi6L+O5L2g</a>
-                    </h5>
-                    <h6 id="4">(大：你好呀；小：欢迎你)</h6>
+                    <h1 id="aa"></h1>
+                    <h4></h4>
 
                 </div>
                 <!-- /ANIMATION CONTAINER -->
@@ -143,12 +118,7 @@
 
     <!-- JAVASCRIPTS -->
     <script>
-        if (outw != null) {
-            document.getElementById("w").innerHTML = outw;
-        } else { }
-        if (outs != null) {
-            document.getElementById("s").innerHTML = outs;
-        } else { }
+        document.getElementById("aa").innerHTML = outp;
     </script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/gh/wayne0926/miaodrew.github.io/assets/js/plugins.min.js"></script>

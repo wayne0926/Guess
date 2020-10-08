@@ -1,4 +1,4 @@
-jQuery(window).on('load', function() {
+jQuery(window).on('load', function () {
         
     // HIDE PRELAODER
     $(".preloader").addClass("preloader-hidden");
