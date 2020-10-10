@@ -6,19 +6,19 @@
 <head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wayne0926/miaodrew.github.io/assets/js/base64.min.js"></script>
     <script>
-        var params = (new URL(document.location)).searchParams;
-        var w = params.get('w'); // 
-        var s = params.get('s'); // 
-        if (w != null) {
-            var w = w.replace(/ /g, '-');
-            var outw = BASE64.urlsafe_decode(w);
+        var params = (new URL(document.location)).searchParams; //
+        var w = params.get('w'); // 得到链接中的w参数字符串
+        var s = params.get('s'); // 得到链接中的s参数字符串
+        if (w != null) { // 判断如果w有值
+            var w = w.replace(/ /g, '-'); // 将链接中的因加号引起的空格全部替换为url-safe base64可识别的字符-
+            var outw = BASE64.urlsafe_decode(w); // 解码base64
             
         } else {
             // var outw = "祝东川学子月考满分"
         }
-        if (s != null) {
-            var s = s.replace(/ /g, '-');
-            var outs = BASE64.urlsafe_decode(s);
+        if (s != null) { // 判断如果s有值
+            var s = s.replace(/ /g, '-'); // 将链接中的因加号引起的空格全部替换为url-safe base64可识别的字符-
+            var outs = BASE64.urlsafe_decode(s); // 解码base64
           
         } else {
             // var outs = "参数请转到https://x.wr0926.ml/p/"
@@ -142,7 +142,9 @@
     <!-- JAVASCRIPTS -->
     <script>
         if (outw != null) {
+            // 将解码的值写入html
             document.getElementById("w").innerHTML = outw;
+            // 删除提示文字
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "none";
@@ -151,7 +153,9 @@
             document.getElementById("6").style.display = "none"
         } else { }
         if (outs != null) {
+            // 将解码的值写入html
             document.getElementById("s").innerHTML = outs;
+            // 删除提示文字
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "none";
